@@ -3,3 +3,6 @@ djangorestframework
 psycopg2-binary
 django-cors-headers
 dj-database-url
+requests>=2.31.0
+cloudinary>=1.33.0
+django-cloudinary-storage>=0.0.6

@@ -1,4 +1,5 @@
 import uuid
+from cloudinary.models import CloudinaryField
 from django.db import models
 
 class Categoria(models.Model):
@@ -20,6 +21,7 @@ class Producto(models.Model):
     stock = models.PositiveIntegerField(default=0)
     categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True, blank=True)
     marca = models.ForeignKey(Marca, on_delete=models.SET_NULL, null=True, blank=True)
+    imagen = CloudinaryField('imagen', blank=True, null=True)
 
     def __str__(self):
         return self.nombre
